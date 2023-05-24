@@ -222,6 +222,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  animation: slide-in ease-out 1s forwards;
 }
 
 .search-input {
@@ -261,7 +262,18 @@ body {
   margin: auto; /* Keskittää ruudukon sivulle */
   margin-top: 40px;
   margin-bottom: 40px;
-  animation: fade-in ease-in-out 1s forwards;
+  animation: fade-in2 ease-out 1s forwards;
+}
+
+@keyframes fade-in2 {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .blogikirjoitus {
