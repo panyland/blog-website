@@ -1,0 +1,519 @@
+/* Yleiset tyylit */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Otsikko */
+.otsikko {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(header2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: 70% 23%;
+  text-align: center; 
+}
+
+.otsikko h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 55px;
+  color: white;
+}
+
+.otsikko p {
+  font-family: 'Marck Script', cursive;
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  margin: 0 auto; /* Centers the header horizontally within its parent container */
+  padding-bottom: 20px;
+}
+
+
+/* Navigointipalkki */
+.navigointi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #202020;
+}
+
+.navigointi ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigointi li {
+  display: inline-block;
+  margin-right: 50px; /* Add margin to the right of each navigation item */
+}
+
+.navigointi li:last-child {
+  margin-right: 0; /* Remove margin from the last navigation item */
+}
+
+.navigointi a {
+  color: white;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 50px; 
+  transition: background-color 0.4s ease; 
+}
+
+.navigointi a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navigointi a.aktiivinen {
+  font-weight: bold;
+}
+
+
+/* Kotisivu */
+.koti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.koti header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.kotiotsikko1 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #333333;
+  margin: 10px 0;
+  animation: fade-in ease-in-out 1s forwards;
+  opacity: 0;
+}
+
+.kotiotsikko2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333333;
+  margin: 10px 0;
+  animation: fade-in ease-in-out 1s forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.koti h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.koti p {
+  font-size: 20px;
+  color: #666666;
+}
+
+.kotiluettelo {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  text-align: left;
+  padding-left: 20px;
+  position: relative;
+}
+
+/*
+.kotiluettelo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  margin-left: 10px;
+  height: 100%;
+  background-color: rgb(29, 29, 29);
+  animation: borderFadeIn ease-in-out 1.3s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+@keyframes borderFadeIn {
+  from {
+    height: 0;
+    top: 50%;
+    transform-origin: center top;
+    transform: rotateX(90deg);
+  }
+  to {
+    height: calc(100% - 4px);
+    top: 0;
+    transform-origin: center bottom;
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+*/
+
+.kotiluettelo-blogi {
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: slide-in ease-in-out 1s forwards;
+}
+.kotiluettelo-pofo {
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: slide-in ease-in-out 1s forwards;
+  animation-delay: 0.3s;
+}
+.kotiluettelo-about {
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: slide-in ease-in-out 1s forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.koti section p {
+  margin: 0px;
+  padding-left: 10px;
+}
+
+
+/* Blogikirjoitukset */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #202020;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.search-button:hover {
+  transform: scale(1.05);
+}
+
+.bloginsisalto {
+  display: flex;
+}
+
+.blogikirjoitukset {
+  display: grid; 
+  grid-template-columns: repeat(3, minmax(400px, auto)); /* Määritellään ruudukon sarakkeet niin, että niitä on kolme ja ne ovat vähintään 400px leveitä */
+  grid-auto-rows: minmax(400px, auto); /* Määritellään ruudukon rivit niin, että ne ovat vähintään 400px korkeita */
+  grid-gap: 30px; /* Määritellään ruudukon väli */
+  margin: auto; /* Keskittää ruudukon sivulle */
+  margin-top: 40px;
+  margin-bottom: 40px;
+  animation: fade-in ease-in-out 1s forwards;
+}
+
+.blogikirjoitus {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 2px 2px #ddd; 
+  width: 400px;
+  height: 400px;
+  transition: transform 0.4s ease;
+}
+
+.blogi-ikkuna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (max-width: 1320px) {
+  .blogikirjoitukset {
+    grid-auto-flow: dense; /* Allow grid items to fill empty spaces */
+    grid-template-columns: repeat(2, minmax(400px, auto));
+    justify-items: center; /* Center items horizontally within the grid */
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .blogikirjoitukset {
+    grid-template-columns: repeat(2, minmax(320px, auto));
+    grid-auto-rows: minmax(320px, auto); /* Reset row height */
+  }
+  .blogikirjoitus {
+    width: 320px;
+    height: 320px;
+  }
+  .blogi-ikkuna h3 {
+    font-size: 16px;
+    margin-top: 7px;
+    margin-bottom: 0; 
+  }
+  .blogi-ikkuna p {
+    font-size: 12px;
+    margin: auto;
+  }
+  .kotiotsikko1 {
+    font-size: 28px;
+   
+  }
+  .kotiotsikko2 {
+    font-size: 24px;
+  }
+  .koti h2 {
+    font-size: 23px;
+  }
+  .koti p {
+    font-size: 19px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+}
+
+.blogikirjoitukset a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blogikuva {
+  width: 100%; /* Asetetaan kuvan leveys sama kuin blogikirjoituksen leveys */
+  height: 75%;
+  border-radius: 15px;
+}
+
+.blogi-ikkuna h3 {
+  margin-top: 13px;
+  margin-bottom: 5px; 
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.blogi-ikkuna p {
+  margin: auto;
+}
+
+.blogikirjoitus:hover {
+  transform: scale(1.05);
+}
+
+.blogiteksti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  max-width: 1000px;
+  padding: 0 20px; 
+  animation: fade-in ease-in-out 1s forwards;
+}
+
+.blogiteksti h1 {
+  text-align: center;
+}
+
+
+/* About */
+.about-section {
+  padding: 30px; 
+}
+
+.container {
+  display: flex; 
+  align-items: center; /* Center items vertically */
+  max-width: 1000px; /* Maximum width of the container */
+  margin: auto; /* Center the container horizontally */
+}
+
+.minakuva {
+  animation: fade-in ease-in-out 1s forwards;
+}
+
+.minakuva img {
+  width: 75%; /* 75% width of the image container */
+  height: auto; /* Keep the aspect ratio of the image */
+  border-radius: 30%; 
+  transition: transform 0.4s ease;
+}
+
+.minakuva img:hover {
+  transform: scale(1.05); 
+}
+
+.text {
+  flex: 2; /* Take up two parts of the available space */
+}
+
+.text h1 {
+  font-size: 36px; 
+  color: #333333; 
+  animation: fade-in ease-in-out 1s forwards;
+}
+
+.text p {
+  font-size: 18px;
+  color: #333333;
+}
+
+.minakappale1 {
+  opacity: 0;
+  animation: slide-in ease-in-out 1s forwards;
+}
+
+.minakappale2 {
+  opacity: 0;
+  animation: slide-in ease-in-out 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.minakappale3 {
+  opacity: 0;
+  animation: slide-in ease-in-out 1s forwards;
+  animation-delay: 0.6s;
+}
+
+.minakappale4 {
+  opacity: 0;
+  animation: slide-in ease-in-out 1s forwards;
+  animation-delay: 0.9s;
+}
+
+.pofo-soon {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+
+/* Alatunniste */
+.alatunniste {
+  font-weight: bold;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+
+@media (max-width: 740px) {
+  .blogikirjoitukset {
+    grid-template-columns: 1fr;
+  }
+  .blogikirjoitus {
+    width: 400px;
+    height: 400px;
+  }
+  .blogi-ikkuna h3 {
+    font-size: revert;
+    margin-top: revert;
+    margin-bottom: 0; 
+  }
+  .blogi-ikkuna p {
+    font-size: revert;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .kotiotsikko1 {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  .kotiotsikko2 {
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .kotiluettelo {
+    padding-right: 10px;
+  }
+  .koti h2 {
+    font-size: 20px;
+  }
+  .koti p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 520px) {
+  .blogikirjoitus {
+    width: 320px;
+    height: 320px;
+  }
+  .blogi-ikkuna h3 {
+    font-size: 16px;
+    margin-top: 7px;
+    margin-bottom: 0; 
+  }
+  .blogi-ikkuna p {
+    font-size: 12px;
+    margin: auto;
+  }
+  .blogiteksti h1 {
+    font-size: 25px;
+  }
+  .navigointi li {
+    margin-right: 17px; /* Reduce margin to the right of each navigation item */
+  }
+  .search-input {
+    width: 220px;
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../style.css">
+  <title>The Sport Scientist</title>
+
+</head>
+<body>
+  <!-- Otsikko -->
+  <header class="otsikko">
+    <h1>The Sport Scientist</h1>
+    <p>Paavo Nyländen</p>
+  </header>
+
+  <!-- Navigointipalkki -->
+  <nav class="navigointi">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a class="aktiivinen" href="index.html">Blog</a></li>
+      <li><a href="../portfolio/index.html">Portfolio</a></li>
+      <li><a href="../yhteystiedot/index.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="search-bar">
+    <input class="search-input" type="text" id="search-input" placeholder="Search blog posts">
+    <button class="search-button" onclick="searchPosts()">Search</button>
+  </div>
+
+  <!-- Blogin sisältö -->
+  <section class="bloginsisalto">
+
+      <!-- Blogikirjoitukset -->
+      <div class="blogikirjoitukset">
+
+        <!-- Yksi blogikirjoitus -->
+        <div class="blogikirjoitus">
+          <a href="Imbalances/index.html">
+            <div class="blogi-ikkuna">
+              <img class="blogikuva" src="balance.jpg" alt="Balance">
+              <h3>Muscle Imbalances and Sports Injuries</h3>
+              <p>05/22/2023</p>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Yksi blogikirjoitus -->     
+        <div class="blogikirjoitus">
+          <a href="kengat/index.html">
+            <div class="blogi-ikkuna">
+              <img class="blogikuva" src="juoksukengat.jpg" alt="Running shoes">
+              <h3>Barefoot vs. Traditional Shoes</h3>
+              <p>05/21/2023</p>
+            </div>
+          </a>
+        </div>       
+
+        <!-- Yksi blogikirjoitus -->
+        <div class="blogikirjoitus">
+          <a href="palautuminen/index.html">
+            <div class="blogi-ikkuna">
+              <img class="blogikuva" src="recovery.jpg" alt="Recovery">
+              <h3>Can You Speed Up Recovery After Exercise?</h3>
+              <p>05/19/2023</p>
+            </div>  
+          </a>
+        </div>
+       
+        <!-- Yksi blogikirjoitus -->
+        <div class="blogikirjoitus">
+          <a href="Genetics/index.html">
+            <div class="blogi-ikkuna">
+              <img class="blogikuva" src="genetics.jpg" alt="Genetics">
+              <h3>The Role of Genetics in Sports Performance</h3>
+              <p>05/15/2023</p>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+  
+  </section>
+    
+  <!-- Koodi blogikirjoitusten hakemiseksi -->
+  <script>
+    function searchPosts() {
+      // Declare variables
+      var input, filter, blogikirjoitukset, blogikirjoitus, otsikko, i, txtValue;
+      input = document.getElementById('search-input');
+      filter = input.value.toUpperCase();
+      blogikirjoitukset = document.getElementsByClassName('blogikirjoitukset')[0];
+      blogikirjoitus = blogikirjoitukset.getElementsByClassName('blogikirjoitus');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < blogikirjoitus.length; i++) {
+        otsikko = blogikirjoitus[i].getElementsByTagName("h3")[0];
+        txtValue = otsikko.textContent || otsikko.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          blogikirjoitus[i].style.display = "";
+        } else {
+          blogikirjoitus[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+  
+  <!-- Alatunniste -->
+  <footer class="alatunniste" id="yhteystiedot">
+    <p>Contact</p>
+    <p>thesportsbiologist@example.com</p>
+    <p>Facebook, Instagram, LinkedIn</p>
+  </footer>
+
+</body>
+</html>
+
