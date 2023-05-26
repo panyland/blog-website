@@ -205,7 +205,7 @@ body {
 
 @keyframes slide-in {
   0% {
-    transform: translateX(70%);
+    transform: translateX(50%);
     opacity: 0;
   }
   100% {
@@ -226,7 +226,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  animation: slide-in ease-out 1s forwards;
+  animation: slide-in ease-in-out 1s forwards;
 }
 
 .search-input {
@@ -266,18 +266,7 @@ body {
   margin: auto; /* Keskittää ruudukon sivulle */
   margin-top: 40px;
   margin-bottom: 40px;
-  animation: fade-in2 ease-out 1s forwards;
-}
-
-@keyframes fade-in2 {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: fade-in ease-in-out 1s forwards;
 }
 
 .blogikirjoitus {
@@ -301,6 +290,22 @@ body {
     grid-auto-flow: dense; /* Allow grid items to fill empty spaces */
     grid-template-columns: repeat(2, minmax(400px, auto));
     justify-items: center; /* Center items horizontally within the grid */
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .pofo-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .jarjesta-pofo {
+    order: 1;
+  }
+
+  .jarjesta-pofo2 {
+    order: 2;
   }
 }
 
@@ -339,6 +344,7 @@ body {
   .container {
     flex-direction: column;
   }
+  
 }
 
 .blogikirjoitukset a {
@@ -452,11 +458,54 @@ body {
   animation-delay: 0.9s;
 }
 
-.pofo-soon {
+.pofo-item {
   display: flex;
   justify-content: center;
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.pofo-kuvateksti {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  background-color: #d8d8d8;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  animation: slide-in ease-in-out 1s forwards;
+  max-width: 600px;
+}
+
+.pofo-kuvateksti h2 {
+  font-size: 30px;
+}
+
+.pofo-kuvateksti a {
+  align-self: center;
+}
+
+.sauter-kuva {
+  height: 600px;
+  width: auto;
+  margin-right: 35px;
+  margin-top: 15px;
+  transition: transform 0.4s ease;
+  animation: fade-in ease-in-out 1s forwards;
+}
+
+.app-kuva {
+  margin-left: 35px;
+  margin-top: 15px;
+  transition: transform 0.4s ease;
+  animation: fade-in ease-in-out 1s forwards;
+}
+
+.pofo-item img:hover {
+  transform: scale(1.05); 
 }
 
 
@@ -486,6 +535,22 @@ body {
     font-size: revert;
     margin: auto;
   }
+  .sauter-kuva {
+    height: auto;
+    width: 500px;
+  }
+  .app-kuva {
+    height: auto;
+    width: 600px;
+    margin-left: 0px;
+  }
+  .pofo-kuvateksti h2 {
+    font-size: 23px;
+  }
+  
+  .pofo-kuvateksti a, p {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -506,6 +571,15 @@ body {
   }
   .koti p {
     font-size: 17px;
+  }
+  .sauter-kuva {
+    height: auto;
+    width: 400px;
+  }
+  .app-kuva {
+    height: auto;
+    width: 450px;
+    margin-left: 0px;
   }
 }
 
@@ -531,5 +605,20 @@ body {
   }
   .search-input {
     width: 220px;
+  }
+  .sauter-kuva {
+    height: auto;
+    width: 340px;
+  }
+  .app-kuva {
+    height: auto;
+    width: 355px;
+    margin-left: 0px;
+  }
+  .pofo-kuvateksti h2 {
+    font-size: 18px;
+  }
+  .pofo-kuvateksti a, p {
+    font-size: 10px;
   }
 }
