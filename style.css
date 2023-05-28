@@ -489,6 +489,12 @@ body {
   .jarjesta-pofo2 {
     order: 2;
   }
+  .sauter-kuva {
+    margin-right: 20px;
+  }
+  .app-kuva {
+    margin-left: 0px;
+  }
 }
 
 @media screen and (max-width: 890px) {
@@ -590,7 +596,8 @@ body {
   .app-kuva {
     height: auto;
     width: 450px;
-    margin-left: 0px;
+    
+    padding-right: 5px;
   }
   .pofo-kuvateksti h2 {
     font-size: 24px;
