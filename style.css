@@ -469,7 +469,7 @@ body {
   }
   .sauter-kuva {
     height: auto;
-    width: 680px;
+    width: 530px;
   }
   .app-kuva {
     height: auto;
@@ -591,11 +591,11 @@ body {
   }
   .sauter-kuva {
     height: auto;
-    width: 400px;
+    width: 460px;
   }
   .app-kuva {
     height: auto;
-    width: 450px;
+    width: 500px;
     
     padding-right: 5px;
   }
