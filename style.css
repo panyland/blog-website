@@ -366,6 +366,13 @@ body {
   font-size: 18px;
 }
 
+.gait-kuva {
+  margin-left: 20px;
+  margin-top: 15px;
+  transition: transform 0.4s ease;
+  animation: fade-in ease-in-out 1s forwards;
+}
+
 .sauter-kuva {
   height: 600px;
   width: auto;
@@ -467,6 +474,10 @@ body {
     grid-template-columns: repeat(2, minmax(400px, auto));
     justify-items: center; /* Center items horizontally within the grid */
   }
+  .gait-kuva {
+    height: auto;
+    width: 650px;
+  }
   .sauter-kuva {
     height: auto;
     width: 530px;
@@ -488,6 +499,9 @@ body {
   }
   .jarjesta-pofo2 {
     order: 2;
+  }
+  .gait-kuva {
+    margin-left: 0px;
   }
   .sauter-kuva {
     margin-right: 20px;
@@ -549,6 +563,12 @@ body {
     font-size: revert;
     margin: auto;
   }
+  .gait-kuva {
+    height: auto;
+    width: 570px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
   .sauter-kuva {
     height: auto;
     width: 500px;
@@ -589,6 +609,11 @@ body {
   .text h1 {
     font-size: 30px; 
   }
+  .gait-kuva {
+    height: auto;
+    width: 500px;
+    padding-right: 5px;
+  }
   .sauter-kuva {
     height: auto;
     width: 460px;
@@ -596,7 +621,6 @@ body {
   .app-kuva {
     height: auto;
     width: 500px;
-    
     padding-right: 5px;
   }
   .pofo-kuvateksti h2 {
@@ -627,6 +651,11 @@ body {
   .search-input {
     width: 220px;
   }
+  .gait-kuva {
+    height: auto;
+    width: 420px;
+    margin-right: 12px;
+  }
   .sauter-kuva {
     height: auto;
     width: 390px;
@@ -645,6 +674,10 @@ body {
 }
 
 @media (max-width: 400px) {
+  .gait-kuva {
+    height: auto;
+    width: 360px;
+  }
   .sauter-kuva {
     height: auto;
     width: 320px;
