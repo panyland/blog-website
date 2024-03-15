@@ -210,6 +210,17 @@ body {
   }
 }
 
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .koti section p {
   margin: 0px;
   padding-left: 10px;
@@ -350,7 +361,7 @@ body {
   padding-right: 15px;
   padding-bottom: 10px;
   border-radius: 20px;
-  animation: slide-in ease-in-out 1s forwards;
+  animation: fade-in ease-in-out 1s forwards;
   max-width: 600px;
 }
 
@@ -370,7 +381,7 @@ body {
   margin-left: 20px;
   margin-top: 15px;
   transition: transform 0.4s ease;
-  animation: fade-in ease-in-out 1s forwards;
+  animation: slide-in ease-in-out 1s forwards;
 }
 
 .sauter-kuva {
@@ -379,14 +390,14 @@ body {
   margin-right: 35px;
   margin-top: 15px;
   transition: transform 0.4s ease;
-  animation: fade-in ease-in-out 1s forwards;
+  animation: slide-in-left ease-in-out 1s forwards;
 }
 
 .app-kuva {
   margin-left: 20px;
   margin-top: 15px;
   transition: transform 0.4s ease;
-  animation: fade-in ease-in-out 1s forwards;
+  animation: slide-in ease-in-out 1s forwards;
 }
 
 .pofo-item img:hover {
