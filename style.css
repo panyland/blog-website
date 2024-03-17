@@ -338,9 +338,13 @@ body {
 }
 
 .blogiteksti p {
-  font-weight: 570;
+  font-weight: bold;
   font-size: 18px;
   line-height: 1.7;
+}
+
+.lahteet p{
+  font-weight: normal;
 }
 
 
