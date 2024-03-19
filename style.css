@@ -662,6 +662,16 @@ body {
   .blogiteksti h1 {
     font-size: 25px;
   }
+  .blogiteksti p {
+    font-size: 15px;
+    
+  }
+  .text h1 {
+    font-size: 30px; 
+  }
+  .text p {
+    font-size: 16px;
+  }
   .navigointi li {
     margin-right: 17px; /* Reduce margin to the right of each navigation item */
   }
