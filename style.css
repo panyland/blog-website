@@ -474,6 +474,84 @@ body {
   animation-delay: 0.9s;
 }
 
+@keyframes expandBorder {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Adjust to the final width of your border */
+  }
+}
+
+.competence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 70px;
+  position: relative; /* Needed to position the pseudo-element correctly */
+  animation: fade-in ease-in-out 1s forwards;
+}
+
+.competence::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; /* Start with a width of 0 */
+  border-top: 2px solid #202020;
+  border-radius: 20px;
+  animation: expandBorder 1s ease-out forwards; /* Apply the animation */
+  animation-delay: 0.5s;
+}
+
+
+.degree {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.bme {
+  margin-right: 80px;
+}
+
+
+.others {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mathstat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.it {
+  margin-left: 30px;
+}
+
+.stat {
+  margin-top: 10px;
+}
+
+.bpa, .bme, .it, .math, .stat{
+  border-radius: 20px; 
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  transition: background-color 0.4s ease;
+  transition: transform 0.4s ease;
+}
+
+.bpa:hover, .bme:hover, .it:hover, .math:hover, .stat:hover {
+  background-color: #d8d8d8;
+  transform: scale(1.05); 
+}
 
 /* Alatunniste-----------------------------------------------------------------> */
 .alatunniste {
@@ -561,6 +639,9 @@ body {
   .container {
     flex-direction: column;
   }
+  .degree {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 740px) {
@@ -642,6 +723,23 @@ body {
   }
   .pofo-kuvateksti h2 {
     font-size: 24px;
+  }
+  .bme {
+    margin-right: 0px;
+  }
+  .competence {
+    align-items: baseline;
+  }
+  .others {
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 0px;
+  }
+  .it {
+    margin-left: 0px;
+  }
+  .degree-header {
+    font-size: 28px; 
   }
 }
 
