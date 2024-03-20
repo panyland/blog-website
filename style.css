@@ -796,6 +796,9 @@ body {
   .pofo-kuvateksti a, .pofo-kuvateksti p {
     font-size: 15px;
   }
+  .degree-header {
+    font-size: 26px; 
+  }
 }
 
 @media (max-width: 400px) {
