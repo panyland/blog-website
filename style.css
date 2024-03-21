@@ -506,6 +506,9 @@ body {
   animation-delay: 0.5s;
 }
 
+.degree ul, .others ul {
+  list-style-type: circle;
+}
 
 .degree {
   display: flex;
