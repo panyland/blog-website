@@ -227,7 +227,11 @@ body {
 }
 
 
-/* Blogikirjoitukset-----------------------------------------------------------------> */
+/* Blogikirjoitukset----------------------------------------------------------------->*/
+.cursive {
+  font-style: oblique;
+}
+
 .search-bar {
   display: flex;
   align-items: center;
