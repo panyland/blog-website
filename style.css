@@ -387,6 +387,15 @@ body {
   font-size: 18px;
 }
 
+.gradu-kuva {
+  height: 550px;
+  width: auto;
+  margin-right: 35px;
+  margin-top: 15px;
+  transition: transform 0.4s ease;
+  animation: slide-in-left ease-in-out 1s forwards;
+}
+
 .gait-kuva {
   margin-left: 20px;
   margin-top: 15px;
@@ -576,6 +585,10 @@ body {
     grid-template-columns: repeat(2, minmax(400px, auto));
     justify-items: center; /* Center items horizontally within the grid */
   }
+  .gradu-kuva {
+    height: auto;
+    width: 690px;
+  }
   .gait-kuva {
     height: auto;
     width: 650px;
@@ -602,6 +615,7 @@ body {
   .jarjesta-pofo2 {
     order: 2;
   }
+  
   .gait-kuva {
     margin-left: 0px;
   }
@@ -668,6 +682,10 @@ body {
     font-size: revert;
     margin: auto;
   }
+  .gradu-kuva {
+    height: auto;
+    width: 570px;
+  }
   .gait-kuva {
     height: auto;
     width: 570px;
@@ -713,6 +731,10 @@ body {
   }
   .text h1 {
     font-size: 30px; 
+  }
+  .gradu-kuva {
+    height: auto;
+    width: 500px;
   }
   .gait-kuva {
     height: auto;
@@ -783,6 +805,10 @@ body {
   .search-input {
     width: 220px;
   }
+  .gradu-kuva {
+    height: auto;
+    width: 420px;
+  }
   .gait-kuva {
     height: auto;
     width: 420px;
@@ -809,6 +835,10 @@ body {
 }
 
 @media (max-width: 400px) {
+  .gradu-kuva {
+    height: auto;
+    width: 380px;
+  }
   .gait-kuva {
     height: auto;
     width: 360px;
