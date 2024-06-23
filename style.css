@@ -685,6 +685,7 @@ body {
   .gradu-kuva {
     height: auto;
     width: 570px;
+    margin-left: 10px;
   }
   .gait-kuva {
     height: auto;
@@ -808,6 +809,7 @@ body {
   .gradu-kuva {
     height: auto;
     width: 420px;
+    margin-left: 12px;
   }
   .gait-kuva {
     height: auto;
