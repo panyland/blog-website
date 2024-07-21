@@ -434,6 +434,7 @@ body {
   align-items: center; /* Center items vertically */
   max-width: 1000px; /* Maximum width of the container */
   margin: auto; /* Center the container horizontally */
+  margin-bottom: 100px;
 }
 
 .minakuva {
@@ -519,43 +520,20 @@ body {
   animation-delay: 0.5s;
 }
 
-.degree ul, .others ul {
+.degrees-grid ul {
   list-style-type: circle;
 }
 
-.degree {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
+.degrees-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+  grid-template-rows: auto auto; /* Creates two rows, each row height adjusts to its content */
+  gap: 20px; /* Adds space between the grid items */
+  margin-top: 50px; /* Spacing from the header */
   margin-bottom: 50px;
 }
 
-.bme {
-  margin-right: 80px;
-}
-
-
-.others {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.mathstat {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.it {
-  margin-left: 30px;
-}
-
-.stat {
-  margin-top: 10px;
-}
-
-.bpa, .bme, .it, .math, .stat{
+.bpa, .bme, .bme2, .others {
   border-radius: 20px; 
   padding-left: 15px;
   padding-right: 15px;
@@ -564,7 +542,7 @@ body {
   transition: transform 0.4s ease;
 }
 
-.bpa:hover, .bme:hover, .it:hover, .math:hover, .stat:hover {
+.bpa:hover, .bme:hover, .bme2:hover, .others:hover {
   background-color: #d8d8d8;
   transform: scale(1.05); 
 }
@@ -660,9 +638,10 @@ body {
   .container {
     flex-direction: column;
   }
-  .degree {
-    flex-direction: column;
+  .degrees-grid {
+    grid-template-columns: 1fr; /* Changes to one column when the screen is smaller */
   }
+  
 }
 
 @media (max-width: 740px) {
@@ -754,22 +733,11 @@ body {
   .pofo-kuvateksti h2 {
     font-size: 24px;
   }
-  .bme {
+  .bme .bme2{
     margin-right: 0px;
   }
   .competence {
     align-items: baseline;
-  }
-  .others {
-    flex-direction: column;
-    align-items: baseline;
-    margin-left: 0px;
-  }
-  .it {
-    margin-left: 0px;
-  }
-  .degree-header {
-    font-size: 28px; 
   }
 }
 
@@ -830,9 +798,6 @@ body {
   }
   .pofo-kuvateksti a, .pofo-kuvateksti p {
     font-size: 15px;
-  }
-  .degree-header {
-    font-size: 26px; 
   }
 }
 
