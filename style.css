@@ -691,6 +691,12 @@ body {
 }
 
 @media (max-width: 600px) {
+  .otsikko h1{
+    font-size: 48px;
+  }
+  .otsikko p{
+    font-size: 28px;
+  }
   .kotiotsikko1 {
     font-size: 25px;
     margin: 10px 0;
@@ -742,6 +748,12 @@ body {
 }
 
 @media (max-width: 520px) {
+  .otsikko h1{
+    font-size: 45px;
+  }
+  .otsikko p{
+    font-size: 25px;
+  }
   .blogikirjoitus {
     width: 320px;
     height: 320px;
