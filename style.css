@@ -352,6 +352,8 @@ body {
 }
 
 
+
+
 /* Portfolio-----------------------------------------------------------------> */
 .pofo-item {
   display: flex;
@@ -745,6 +747,9 @@ body {
   .competence {
     align-items: baseline;
   }
+  .tekstikuva {
+    width: 500px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -810,6 +815,9 @@ body {
   }
   .pofo-kuvateksti a, .pofo-kuvateksti p {
     font-size: 15px;
+  }
+  .tekstikuva {
+    width: 450px;
   }
 }
 
