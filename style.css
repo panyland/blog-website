@@ -838,4 +838,7 @@ body {
     height: auto;
     width: 360px;
   }
+  .tekstikuva {
+    width: 380px;
+  }
 }
