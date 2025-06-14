@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../style.css">
+  <title>Paavo Nyländen</title>
+
+</head>
+<body>
+  <!-- Otsikko -->
+  <header class="otsikko">
+    <h1>Sport Science & Engineering</h1>
+    <p>By Paavo Nyländen</p>
+  </header>
+
+  <!-- Navigointipalkki -->
+  <nav class="navigointi">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a class="aktiivinen" href="index.html">Blog</a></li>
+      <li><a href="../portfolio/index.html">Portfolio</a></li>
+      <li><a href="../yhteystiedot/index.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="search-bar">
+    <input class="search-input" type="text" id="search-input" placeholder="Search blog posts">
+    <button class="search-button" onclick="searchPosts()">Search</button>
+  </div>
+
+  <!-- Blogin sisältö -->
+  <section class="bloginsisalto">
+
+      <!-- Blogikirjoitukset -->
+      <div class="blogikirjoitukset">
+
+        <!-- Yksi blogikirjoitus -->
+        <div class="blogikirjoitus">
+          <a href="hrv/index.html">
+            <div class="blogi-ikkuna">
+              <img class="blogikuva" src="hrv.png" alt="HRV">
+              <h3>What Is Heart Rate Variability — And What Does It Tell Us?</h3>
+              <p></p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Yksi blogikirjoitus -->
+        <div class="blogikirjoitus">
+          <a href="imbalance/index.html">
+            <div class="blogi-ikkuna">
+              <img class="blogikuva" src="dumb.jpg" alt="Balance">
+              <h3>Can Muscle Imbalances Increase The Risk of Injury?</h3>
+              <p>20 Mar 2025</p>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Yksi blogikirjoitus -->     
+        <div class="blogikirjoitus">
+          <a href="shoes/index.html">
+            <div class="blogi-ikkuna">
+              <img class="blogikuva" src="shoes.jpg" alt="Running shoes">
+              <h3>How Does Your Shoes Affect Running Performance?</h3>
+              <p>19 Dec 2024</p>
+            </div>
+          </a>
+        </div>       
+
+        <!-- Yksi blogikirjoitus -->
+        <div class="blogikirjoitus">
+          <a href="recovery/index.html">
+            <div class="blogi-ikkuna">
+              <img class="blogikuva" src="recovery.png" alt="Recovery">
+              <h3>Can You Speed Up Recovery From Exercise?</h3>
+              <p>15 Aug 2024</p>
+            </div>  
+          </a>
+        </div>
+       
+        <!-- Yksi blogikirjoitus -->
+        <div class="blogikirjoitus">
+          <a href="hydration/index.html">
+            <div class="blogi-ikkuna">
+              <img class="blogikuva" src="water.jpg" alt="Genetics">
+              <h3>What Effect Does Hydration Status Have on Physical Performance?</h3>
+              <p>21 May 2024</p>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+  
+  </section>
+    
+  <!-- Koodi blogikirjoitusten hakemiseksi -->
+  <script>
+    function searchPosts() {
+      // Declare variables
+      var input, filter, blogikirjoitukset, blogikirjoitus, otsikko, i, txtValue;
+      input = document.getElementById('search-input');
+      filter = input.value.toUpperCase();
+      blogikirjoitukset = document.getElementsByClassName('blogikirjoitukset')[0];
+      blogikirjoitus = blogikirjoitukset.getElementsByClassName('blogikirjoitus');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < blogikirjoitus.length; i++) {
+        otsikko = blogikirjoitus[i].getElementsByTagName("h3")[0];
+        txtValue = otsikko.textContent || otsikko.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          blogikirjoitus[i].style.display = "";
+        } else {
+          blogikirjoitus[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+  
+  <!-- Alatunniste -->
+  <footer class="alatunniste" id="yhteystiedot">
+    <p>CONTACT</p>
+    <p>Email: paavo.nylanden@outlook.com</p>
+    <p>LinkedIn: Paavo Nyländen</p>
+  </footer>
+
+</body>
+</html>
+
