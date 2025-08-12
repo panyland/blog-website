@@ -83,37 +83,7 @@ body {
 }
 
 
-/* Kotisivu-----------------------------------------------------------------> */
-.koti {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.koti header {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.kotiotsikko1 {
-  font-size: 35px;
-  font-weight: bold;
-  margin: 10px 0;
-  animation: fade-in ease-in-out 1s forwards;
-  opacity: 0;
-}
-
-.kotiotsikko2 {
-  font-size: 30px;
-  font-weight: bold;
-  margin: 10px 0;
-  animation: fade-in ease-in-out 1s forwards;
-  opacity: 0;
-  animation-delay: 0.3s;
-}
-
+/* Animaatiot-----------------------------------------------------------------> */
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -123,50 +93,6 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.koti h2 {
-  font-size: 25px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-top: 0;
-}
-
-.koti p {
-  font-size: 20px;
-}
-
-.kotiluettelo {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 35px;
-  text-align: left;
-  padding-left: 20px;
-  position: relative;
-}
-
-.kotiluettelo-blogi {
-  margin-bottom: 40px;
-  opacity: 0;
-  animation: slide-in ease-in-out 1s forwards;
-}
-
-.kotiluettelo-pofo {
-  margin-bottom: 40px;
-  opacity: 0;
-  animation: slide-in ease-in-out 1s forwards;
-  animation-delay: 0.3s;
-}
-
-.kotiluettelo-about {
-  margin-bottom: 10px;
-  opacity: 0;
-  animation: slide-in ease-in-out 1s forwards;
-  animation-delay: 0.6s;
 }
 
 @keyframes slide-in {
@@ -189,11 +115,6 @@ body {
     transform: translateX(0);
     opacity: 1;
   }
-}
-
-.koti section p {
-  margin: 0px;
-  padding-left: 10px;
 }
 
 
@@ -322,89 +243,6 @@ body {
 }
 
 
-/* Portfolio-----------------------------------------------------------------> */
-.pofo-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 100px;
-  margin-top: 50px;
-  padding-left: 30px;
-  padding-right: 10px;
-}
-
-.pofo-kuvateksti {
-  display: flex;
-  flex-direction: column;
-  margin-right: 20px;
-  background-color: #d8d8d8;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 10px;
-  border-radius: 20px;
-  animation: fade-in ease-in-out 1s forwards;
-  max-width: 600px;
-}
-
-.pofo-kuvateksti h2 {
-  font-size: 30px;
-}
-
-.pofo-kuvateksti a {
-  align-self: center;
-}
-
-.pofo-kuvateksti a, .pofo-kuvateksti p {
-  font-size: 18px;
-}
-
-.model-kuva {
-  margin-left: 10px;
-  transition: transform 0.4s ease;
-  animation: slide-in ease-in-out 1s forwards;
-}
-
-.gradu-kuva {
-  height: 550px;
-  width: auto;
-  margin-right: 35px;
-  margin-top: 15px;
-  transition: transform 0.4s ease;
-  animation: slide-in-left ease-in-out 1s forwards;
-}
-
-.gait-kuva {
-  margin-left: 20px;
-  margin-top: 15px;
-  transition: transform 0.4s ease;
-  animation: slide-in ease-in-out 1s forwards;
-}
-
-.sauter-kuva {
-  height: 600px;
-  width: auto;
-  margin-right: 35px;
-  margin-top: 15px;
-  transition: transform 0.4s ease;
-  animation: slide-in-left ease-in-out 1s forwards;
-}
-
-.app-kuva {
-  margin-left: 20px;
-  margin-top: 15px;
-  transition: transform 0.4s ease;
-  animation: slide-in ease-in-out 1s forwards;
-}
-
-.jarjesta-pofo2 {
-  transition: transform 0.4s ease;
-} 
-
-.jarjesta-pofo2:hover {
-  transform: scale(1.05);
-}
-
-
 /* About-----------------------------------------------------------------> */
 .about-section {
   padding: 30px; 
@@ -461,12 +299,6 @@ body {
   opacity: 0;
   animation: slide-in ease-in-out 1s forwards;
   animation-delay: 0.6s;
-}
-
-.minakappale4 {
-  opacity: 0;
-  animation: slide-in ease-in-out 1s forwards;
-  animation-delay: 0.9s;
 }
 
 @keyframes expandBorder {
@@ -545,55 +377,6 @@ body {
     grid-template-columns: repeat(2, minmax(400px, auto));
     justify-items: center; 
   }
-  .model-kuva {
-    width: 660px;
-    height: auto;
-  }
-  .gradu-kuva {
-    height: auto;
-    width: 660px;
-  }
-  .gait-kuva {
-    height: auto;
-    width: 650px;
-  }
-  .sauter-kuva {
-    height: auto;
-    width: 530px;
-  }
-  .app-kuva {
-    height: auto;
-    width: 650px;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .pofo-item {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .jarjesta-pofo {
-    order: 1;
-  }
-  .jarjesta-pofo2 {
-    order: 2;
-  }
-  .model-kuva {
-    width: 600px;
-    height: auto;
-    padding-top: 15px;
-    margin-left: 0px;
-  }
-  .gait-kuva {
-    margin-left: 0px;
-  }
-  .sauter-kuva {
-    margin-right: 20px;
-  }
-  .app-kuva {
-    margin-left: 0px;
-  }
 }
 
 @media screen and (max-width: 890px) {
@@ -613,18 +396,6 @@ body {
   .blogi-ikkuna p {
     font-size: 12px;
     margin: auto;
-  }
-  .kotiotsikko1 {
-    font-size: 28px;
-  }
-  .kotiotsikko2 {
-    font-size: 24px;
-  }
-  .koti h2 {
-    font-size: 23px;
-  }
-  .koti p {
-    font-size: 19px;
   }
   .container {
     flex-direction: column;
@@ -651,37 +422,6 @@ body {
     font-size: revert;
     margin: auto;
   }
-  .model-kuva {
-    width: 580px;
-    height: auto;
-  }
-  .gradu-kuva {
-    height: auto;
-    width: 570px;
-    margin-left: 10px;
-  }
-  .gait-kuva {
-    height: auto;
-    width: 570px;
-    margin-left: 0px;
-    margin-right: 10px;
-  }
-  .sauter-kuva {
-    height: auto;
-    width: 500px;
-  }
-  .app-kuva {
-    height: auto;
-    width: 570px;
-    margin-left: 0px;
-    margin-right: 10px;
-  }
-  .pofo-kuvateksti h2 {
-    font-size: 27px;
-  }
-  .pofo-kuvateksti a, .pofo-kuvateksti p {
-    font-size: 17px;
-  }
 }
 
 @media (max-width: 600px) {
@@ -691,51 +431,8 @@ body {
   .otsikko p{
     font-size: 28px;
   }
-  .kotiotsikko1 {
-    font-size: 25px;
-    margin: 10px 0;
-  }
-  .kotiotsikko2 {
-    font-size: 20px;
-    margin: 10px 0;
-    padding: 10px;
-  }
-  .kotiluettelo {
-    padding-right: 10px;
-  }
-  .koti h2 {
-    font-size: 20px;
-  }
-  .koti p {
-    font-size: 17px;
-  }
   .text h1 {
     font-size: 30px; 
-  }
-  .model-kuva {
-    width: 500px;
-    height: auto;
-  }
-  .gradu-kuva {
-    height: auto;
-    width: 500px;
-  }
-  .gait-kuva {
-    height: auto;
-    width: 500px;
-    padding-right: 5px;
-  }
-  .sauter-kuva {
-    height: auto;
-    width: 460px;
-  }
-  .app-kuva {
-    height: auto;
-    width: 500px;
-    padding-right: 5px;
-  }
-  .pofo-kuvateksti h2 {
-    font-size: 24px;
   }
   .bme .bme2{
     margin-right: 0px;
@@ -773,7 +470,6 @@ body {
   }
   .blogiteksti p {
     font-size: 15px;
-    
   }
   .text h1 {
     font-size: 30px; 
@@ -787,62 +483,12 @@ body {
   .search-input {
     width: 220px;
   }
-  .model-kuva {
-    width: 430px;
-    height: auto;
-  }
-  .gradu-kuva {
-    height: auto;
-    width: 420px;
-    margin-left: 12px;
-  }
-  .gait-kuva {
-    height: auto;
-    width: 420px;
-    margin-right: 12px;
-  }
-  .sauter-kuva {
-    height: auto;
-    width: 390px;
-  }
-  .app-kuva {
-    height: auto;
-    width: 420px;
-    margin-right: 12px;
-  }
-  .pofo-kuvateksti h2 {
-    font-size: 20px;
-  }
-  .pofo-kuvateksti a, .pofo-kuvateksti p {
-    font-size: 15px;
-  }
   .tekstikuva {
     width: 450px;
   }
 }
 
 @media (max-width: 400px) {
-  .model-kuva {
-    width: 360px;
-    height: auto;
-    padding-right: 10px;
-  }
-  .gradu-kuva {
-    height: auto;
-    width: 360px;
-  }
-  .gait-kuva {
-    height: auto;
-    width: 360px;
-  }
-  .sauter-kuva {
-    height: auto;
-    width: 320px;
-  }
-  .app-kuva {
-    height: auto;
-    width: 360px;
-  }
   .tekstikuva {
     width: 340px;
   }
