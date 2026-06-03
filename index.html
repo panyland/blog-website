@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,17 +17,10 @@
     <p>By Paavo Nyländen</p>
   </header>
 
-  <!-- Navigointipalkki -->
-  <nav class="navigointi">
-    <ul>
-      <li><a class="aktiivinen" href="index.html">Blog</a></li>
-      <li><a href="yhteystiedot/index.html">About</a></li>
-    </ul>
-  </nav>
+  <div class="navigointi"></div>
 
   <div class="search-bar">
-    <input class="search-input" type="text" id="search-input" placeholder="Search blog posts">
-    <button class="search-button" onclick="searchPosts()">Search</button>
+    <input class="search-input" type="text" id="search-input" placeholder="Search blog posts" oninput="searchPosts()">
   </div>
 
   <!-- Blogin sisältö -->
@@ -35,6 +28,17 @@
 
       <!-- Blogikirjoitukset -->
       <div class="blogikirjoitukset">
+
+        <!-- Yksi blogikirjoitus -->
+        <div class="blogikirjoitus">
+          <a href="posts/muscle-fatigue/index.html">
+            <div class="blogi-ikkuna">
+              <img class="blogikuva" src="images/muscle-fatigue.png" alt="Muscle Fatigue">
+              <h3>What Causes Your Muscles to Fatigue?</h3>
+              <p>03 Jun 2026</p>
+            </div>
+          </a>
+        </div>
 
         <!-- Yksi blogikirjoitus -->
         <div class="blogikirjoitus">
@@ -63,7 +67,7 @@
           <a href="posts/shoes/index.html">
             <div class="blogi-ikkuna">
               <img class="blogikuva" src="images/shoes.jpg" alt="Running shoes">
-              <h3>How Does Your Shoes Affect Running Performance?</h3>
+              <h3>How Do Your Shoes Affect Running Performance?</h3>
               <p>19 Dec 2024</p>
             </div>
           </a>
@@ -120,10 +124,9 @@
 
   
   <!-- Alatunniste -->
-  <footer class="alatunniste" id="yhteystiedot">
+  <footer class="alatunniste">
     <p>CONTACT</p>
-    <p>Email: paavo.nylanden@outlook.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/paavonylanden/">Paavo Nyländen</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/paavonylanden/">Paavo Nyländen</a></p>
   </footer>
 
 </body>
