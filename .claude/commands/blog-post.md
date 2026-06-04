@@ -45,9 +45,12 @@ Stop here. Ask the user to approve the list. The user may remove articles or ask
 
 After the article list is approved, write the post. Match the style of the existing posts on this site — read `posts/recovery/index.html` or `posts/hrv/index.html` for reference on tone, length, and structure:
 
-- Flowing, evidence-based paragraphs — accessible but scientifically grounded
+- Flowing, evidence-based paragraphs — scientific but accessible to an educated general audience
+- No unnecessary jargon; explain technical terms when they are essential
+- **No em dashes** (—) used as sentence separators; rephrase those as separate sentences or use commas instead
 - **No inline citations** — do not mention author names or years inside the body text
-- 6–10 paragraphs, similar length to existing posts
+- Cover the topic thoroughly but keep the writing concise — cut anything that does not add meaning
+- Length should match the topic: a focused topic warrants a shorter post, a complex one warrants a longer one; do not pad or artificially constrain
 - A **References** section at the end, formatted exactly like the existing posts:
   `Author(s). Title. Journal. Year;volume(issue):pages. doi: ...`
 

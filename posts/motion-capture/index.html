@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Paavo Nyländen</title>
+</head>
+<body>
+  <header class="otsikko">
+    <h1>Sport Science & Engineering</h1>
+    <p>By Paavo Nyländen</p>
+  </header>
+
+  <div class="navigointi"><a class="back-link" href="../../index.html">&#8592; Blog</a></div>
+
+  <div class="blogiteksti">
+    <h1>Movement Analysis in Sport: Optical Motion Capture and Inertial Sensors</h1>
+    <p>04 Jun 2026</p>
+
+    <p>
+    Understanding how athletes move is central to sport science. Whether the goal is to refine technique, assess injury risk, or monitor the effects of training, researchers need tools that can measure the body's motion in precise, quantitative terms. Two technologies dominate this field: optical motion capture and inertial measurement units, commonly referred to as IMUs. Both can track how the body moves through space, but they work on entirely different principles and come with distinct trade-offs that determine how and where each is best used.
+    </p>
+
+    <p>
+    Optical motion capture works by tracking the positions of small retroreflective markers placed on the skin over anatomically defined landmarks. A set of infrared cameras surrounds the measurement area, each emitting pulses of infrared light that bounce off the markers and return to the camera's sensor. By combining the two dimensional images from multiple cameras, the system reconstructs the three dimensional position of each marker through a process called triangulation. From these positions, joint angles, segment velocities, and accelerations can all be derived with high precision. Laboratory grade optical systems achieve submillimetre positional accuracy and can sample at several hundred frames per second, making them the established reference standard for biomechanical research. They are routinely used alongside force plates, which measure the ground reaction forces beneath the athlete, and electromyography sensors that record muscle electrical activity, providing a complete picture of the mechanical demands placed on the body during movement.
+    </p>
+
+    <p>
+    The limitation of optical systems is practical. They require a controlled laboratory setting, a time-consuming camera calibration and marker placement procedure, and a capture volume that rarely extends beyond a few metres in any direction. They cannot function outdoors, and partial or full occlusion of markers during complex movements remains a persistent source of error. If one part of the body blocks a camera's line of sight to a marker, that marker's position must be estimated or dropped from the analysis entirely.
+    </p>
+
+    <p>
+    An inertial measurement unit is a small electronic device containing three types of sensor: an accelerometer that measures linear acceleration along three axes, a gyroscope that measures rotational velocity around three axes, and typically a magnetometer that measures the local magnetic field to provide an absolute directional reference. By combining these signals through mathematical algorithms known as sensor fusion, the unit estimates its orientation in space continuously and in real time. When mounted to body segments using elastic straps or integrated directly into clothing, a network of IMUs can reconstruct whole body posture and movement without cameras or any external infrastructure.
+    </p>
+
+    <p>
+    This portability is the defining advantage of IMUs. Athletes can wear them during actual training sessions on the field, on snow, or in the water, not just during dedicated laboratory visits. The tradeoff is accuracy. IMU derived joint angle errors typically range from 2 to 8 degrees depending on movement speed and complexity. Faster movements demand higher sampling rates: research has shown that 100 Hz is adequate for walking, 200 Hz for running, and around 400 Hz for high speed cyclic movements. A source of error specific to IMUs is gyroscope drift, where small measurement errors accumulate over time and gradually degrade the orientation estimate. Magnetometers can partially correct for this by anchoring the estimate to Earth's magnetic field, but they are easily disturbed by metallic objects and electromagnetic interference common in sports facilities.
+    </p>
+
+    <p>
+    Mounting sensors to the body introduces another layer of complexity. Before data collection, the orientation of each sensor must be related to the anatomical axes of the underlying bone segment, a procedure known as sensor to segment alignment. Different alignment strategies produce varying levels of accuracy depending on the joint and the movement task. Studies comparing multiple alignment methods for lower limb movements during dynamic sports tasks have found differences in joint angle error ranging from less than 0.1 degrees to over 24 degrees depending on the specific joint and task. The choice of alignment procedure is therefore not a minor technical detail but a fundamental methodological decision.
+    </p>
+
+    <p>
+    The practical value of each technology becomes clearest when applied to specific sports problems. In baseball, overhead pitching involves some of the fastest joint angular velocities recorded in human movement. Conventional optical systems, typically operating at 200 to 300 frames per second, lack the temporal resolution to fully capture the brief explosive phases of a pitch. A wide-range wireless IMU system deployed on collegiate and elite baseball pitchers demonstrated that inertial sensors could resolve these dynamics far more effectively, capturing acceleration and torque profiles that were inaccessible to optical setups and generating new metrics relevant to performance assessment and injury load monitoring.
+    </p>
+
+    <p>
+    In racket sports, a study mounting an inertial and magnetic sensor unit directly onto a squash racket found that orientation estimates agreed with laboratory optical data to within 0.5 degrees at ball impact and within 2.2 degrees across the full swing phase, suggesting that wearable sensors can provide reliable technique data outside the laboratory in this context. For athletic testing, a single IMU attached to the sacrum has been validated for estimating countermovement jump height with errors comparable to those seen between force plates and optical cameras, demonstrating that reliable performance assessment can be conducted anywhere with minimal equipment. In cross country skiing, researchers applied a full body IMU system to experienced skiers and translated 14 distinct elements of the V2 skating technique into statistically separable, measurable parameters covering posture, limb position, arm movement, and timing. This kind of approach offers a path to objective technique feedback in a sport that takes place far beyond any laboratory.
+    </p>
+
+    <p>
+    Systematic comparisons between the two technologies reveal a consistent picture. Optical systems maintain submillimetre accuracy in controlled environments, while IMUs achieve angular accuracy within 2 to 8 degrees depending on movement complexity. The gap narrows for movements largely confined to the sagittal plane, which governs many fundamental athletic actions such as running, jumping, and cycling. Rotational and lateral movements carry larger IMU errors and require more careful interpretation. Reviews of mocap technology across multiple sport environments also find that environmental factors substantially affect system performance, with aquatic settings and outdoor conditions presenting particular challenges for both optical and IMU approaches.
+    </p>
+
+    <p>
+    An emerging line of research aims to close the accuracy gap entirely using machine learning. By training neural networks on simultaneous recordings from both IMUs and optical systems, it becomes possible to predict the positions of optical markers from IMU data alone. This would allow the decades of biomechanical methodology developed around optical systems to be applied to wearable sensor data, combining laboratory accuracy with field portability. Early results show marker position predictions within 2 to 4 centimetres of the true optical position, yielding joint angle estimates within a few degrees, with evidence of generalisation across independent datasets.
+    </p>
+
+    <p>
+    Optical motion capture and IMUs are not competing technologies. They occupy different niches defined by the precision required and the environment in which the athlete must be measured. When millimetre level accuracy and simultaneous recording of ground reaction forces and muscle activity are all needed, the optical laboratory remains the reference standard. When the sport takes place outdoors, across many sessions in a training calendar, or in environments where cameras simply cannot follow, IMUs offer a practical and increasingly accurate alternative. The two approaches are increasingly used together: optical systems to validate and calibrate, inertial sensors to capture sport as it actually happens.
+    </p>
+
+    <h2>References</h2>
+    <div class="lahteet">
+      <p>Adlou B, Wilburn C, Weimar W. Motion Capture Technologies for Athletic Performance Enhancement and Injury Risk Assessment: A Review for Multi-Sport Organizations. Sensors (Basel). 2025;25(14):4384. doi: 10.3390/s25144384.</p>
+      <p>Suo X, Tang W, Li Z. Motion Capture Technology in Sports Scenarios: A Survey. Sensors (Basel). 2024;24(9):2947. doi: 10.3390/s24092947.</p>
+      <p>Fan B, Zhang L, Cai S, Du M, Liu T, Li Q, Shull P. Influence of Sampling Rate on Wearable IMU Orientation Estimation Accuracy for Human Movement Analysis. Sensors (Basel). 2025;25(7):1976. doi: 10.3390/s25071976.</p>
+      <p>Ekdahl M, Loewen A, Erdman A, Sahin S, Ulman S. Inertial Measurement Unit Sensor-to-Segment Calibration Comparison for Sport-Specific Motion Analysis. Sensors (Basel). 2023;23(18):7987. doi: 10.3390/s23187987.</p>
+      <p>Debertin D, Haag L, Federolf P. IMU Data-Driven and PCA-Based Approach to Establish Quantifiable and Practically Applicable Measures for V2 Technique Elements in Cross-Country Skiing. Scand J Med Sci Sports. 2024;34(7):e14691. doi: 10.1111/sms.14691.</p>
+      <p>Fathian R, Khandan A, Chiu LZF, Rouhani H. Assessment of countermovement jump with and without arm swing using a single inertial measurement unit. Sports Biomech. 2024;23(11):2390-2407. doi: 10.1080/14763141.2022.2032296.</p>
+      <p>Lapinski M, Brum Medeiros C, Moxley Scarborough D, Berkson E, Gill TJ, Kepple T, Paradiso JA. A Wide-Range, Wireless Wearable Inertial Motion Sensing System for Capturing Fast Athletic Biomechanics in Overhead Pitching. Sensors (Basel). 2019;19(17):3637. doi: 10.3390/s19173637.</p>
+      <p>Williams BK, Sanders RH, Ryu JH, Bourdon PC, Graham-Smith P, Sinclair PJ. Static and dynamic accuracy of a magnetic-inertial measurement unit used to provide racket swing kinematics. Sports Biomech. 2019;18(2):202-214. doi: 10.1080/14763141.2017.1391326.</p>
+      <p>Vitali RV, Cain SM, McGinnis RS, Zaferiou AM, Ojeda LV, Davidson SP, Perkins NC. Method for Estimating Three-Dimensional Knee Rotations Using Two Inertial Measurement Units: Validation with a Coordinate Measurement Machine. Sensors (Basel). 2017;17(9):1970. doi: 10.3390/s17091970.</p>
+      <p>Shah VR, Dixon PC. Bridging the Methodological Gap Between Inertial Sensors and Optical Motion Capture: Deep Learning as the Path to Accurate Joint Kinematic Modelling Using Inertial Sensors. Sensors (Basel). 2025;25(18):5728. doi: 10.3390/s25185728.</p>
+    </div>
+  </div>
+
+  <footer class="alatunniste">
+    <p>CONTACT</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/paavonylanden/">Paavo Nyländen</a></p>
+  </footer>
+</body>
+</html>
